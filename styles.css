@@ -1,0 +1,518 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bg-main);
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+      background-color: var(--bg-main);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+    
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--text-main);
+    transition: var(--smooth);
+}
+
+:root{
+    --bg-main: #fff;
+    --bg-button: #bfbfbf;
+    --bg-second: #404040;
+    --black: #000;
+    --white: #fff;
+    --text-main:#530000;
+    --smooth: all 0.3s ease-in;
+    --border-radius: 15px;
+}   
+
+.main-profilo{
+    padding: 0 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list-nav{
+    display: flex;
+}
+
+.item-nav{
+    padding: 10px 20px;
+    cursor: pointer;
+}   
+
+.btn-main{
+    background-color: var(--bg-button);
+    color: var(--black);
+    padding: 5px 15px;
+    border-radius: var(--border-radius);
+}
+
+.info-banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-about h3{
+    font-style: italic;
+    font-size: 16px;
+}
+
+.section-about h1{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-main);
+}
+
+.section-about .info{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.section-about .project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-project{
+    width: 50%;
+    color:#000;
+    font-size: italic;
+}
+.text-project:hover {
+    color: #6C3428;
+    transition: var(--smooth);}
+
+.btn-project{
+    margin-top: 20px;
+    font-size: 13px!important;
+    font-weight: 400!important;
+}
+
+.date{
+    font-style: italic;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    *{
+        font-size: 14px;
+    }
+    .header{
+        justify-content: center;
+    }
+
+    .item-nav{
+        padding: 10px;
+        cursor: pointer;
+    }  
+    
+    .info-banner{
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+    } 
+   .main-profilo{
+        width: 100%;
+    }
+
+    .contact, .list-graphic{
+        flex-direction: column;
+    }
+
+    .item-contact{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .section-project .list{
+        flex-direction: column;
+    }
+    .scroll{
+        right: 10%!important;
+    }
+    .logo1 {
+        position: absolute;
+        left: 540px;
+    }
+}
+
+.info-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-profile h2{
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 300;
+    animation-name: infopro;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.info-profile:hover{
+    animation-play-state: running;
+}
+
+@keyframes infopro {
+    from {
+       scale: 0.75;
+    }
+
+    to {
+       scale: 0.8;
+    }
+}
+
+.name{
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+.name:hover {
+    color: #000044;
+    transition: var(--smooth);
+}
+.btn-viewmore{
+    width: fit-content;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+}
+.insta img { 
+    height: 50px;
+    width: 50px;
+    margin-right: 50px;
+    z-index: 1;
+
+    animation-name: insta;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.8s;
+    animation-play-state: paused;
+}
+.insta img:hover{
+    animation-play-state: running;
+}
+
+@keyframes insta {
+    from {
+        opacity: 100%
+    }
+
+    to {
+        opacity: 60%; 
+    }
+}
+.behance img { 
+    height: 50px;
+    width: 50px;
+    margin-left: 100px;
+    margin-top: -82px;
+
+    z-index: 1;
+
+    animation-name: behance;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.8s;
+    animation-play-state: paused;
+}
+.behance img:hover{
+    animation-play-state: running;
+}
+
+@keyframes behance {
+    from {
+        opacity: 100%
+    }
+
+    to {
+        opacity: 60%; 
+    }
+}
+
+.banner img { 
+    width: 850px;
+    z-index: 1;
+    
+
+    animation-name: banner;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.banner img:hover{
+    animation-play-state: running;
+}
+
+@keyframes banner {
+    from {
+       scale: 0.8;
+    }
+
+    to {
+       scale: 0.9;
+    }
+}
+
+.section{
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.section-about{
+    margin-top: 50px;
+}
+.img1 img { 
+    width: 80px;
+    height: 150px;
+
+    animation: img1 1.5s alternate infinite ease-in-out;
+}
+
+@keyframes img1 {
+    from {
+        scale: 0.8;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+ 
+.img2 img{ 
+   width: 100px;
+   height: 100px;
+   animation: wheelspoke 5s linear infinite;
+}
+
+@keyframes wheelspoke {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.art-work{
+    text-align: center;
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.logo-aso{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    cursor: pointer;
+}
+
+.design{
+    text-align: left;
+}
+
+.list-design img{
+    margin-top: 20px;
+    height: 250px;
+    text-align: center;
+}
+
+.list-design h1{
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.list-design a {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.list-graphic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-graphic img{
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.list-graphic h1{
+    color: var(--text-main);
+    font-weight: 600;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.text-left a{
+    margin: 0 auto;
+    font-style: italic;
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.text-left p{
+    width: 70%;
+    text-align: center;
+}
+
+.footer p {
+    font-style: italic;
+}
+
+.footer h1{
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-main);
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.item-contact img {
+    height: 30px;
+    width: 30px;
+}
+
+.item-contact{
+    display: flex;
+    gap: 15px;
+    margin: 0 10px;
+    color: #000;
+}
+.item-contact:hover {
+    color: #6C3428;
+    transition: var(--smooth);}
+
+
+.info-social{
+    margin-top: 10px ;
+}
+
+.info-social img {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+}
+
+.list-art{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 300px;
+    height: 400px;
+    height: auto;
+    display: block;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    /* width: 200px; */
+
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scroll .prev, .scroll .next{
+    font-size: 24px;
+    margin: 5px 10px;
+}
+
+.section-project .list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.section-project .text-about h1{
+    color: var(--text-main);
+    font-weight: 600;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.section-project .text-about{
+    width: 70%;
+}
+
+.slider-container a{
+    font-style: italic;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.logo1 {
+    position: absolute;
+    left: 1380px;
+
+}
+
